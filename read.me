@@ -1,0 +1,21 @@
+The easiest way to compile and run ME-SFE is using ant <http://ant.apache.org/>.
+
+To run any of the applications, type:
+
+ant TARGET
+
+with one of the following TARGETs:
+runAES, runAES_old, runFastMultiplication, runhamming, runhamming_old, runPRESENT,
+runSetMinimum_A, runSetMinimum_B, runSetMinimum_C.
+
+To run the hamming distance application this would be:
+ant runhamming
+
+Both server and client will be startet on the same machine, and the protocol will
+be executed 1000 times. The results will be written into the results folder. For 
+hamming distance the results get written into results/hammingserverout and
+results/hammingclientout.
+
+More information about the protocols can be found in the paper:
+W. Henecka, T. Schneider, Faster Secure Two-Party Computation with Less Memory, 
+AsiaCCS 2013 

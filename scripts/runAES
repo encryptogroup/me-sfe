@@ -1,0 +1,7 @@
+#!/bin/bash
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.AESServer true 1000 1>results/aesserverout 2>results/aesservererr &
+
+sleep 0.8
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.AESClient true 1000 1>results/aesclientout 2>results/aesclienterr & 
