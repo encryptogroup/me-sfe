@@ -1,0 +1,31 @@
+#!/bin/bash
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomServer 10 10000 1>results/secureScaling_10_server_wc &
+
+sleep 0.8
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomClient 10 10000 1>results/secureScaling_10_client_wc 
+
+sleep 2.0
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomServer 100 10000 1>results/secureScaling_100_server_wc &
+
+sleep 0.8
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomClient 100 10000 1>results/secureScaling_100_client_wc 
+
+sleep 2.0
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomServer 1000 10000 1>results/secureScaling_1000_server_wc &
+
+sleep 0.8
+
+java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomClient 1000 10000 1>results/secureScaling_1000_client_wc 
+
+#sleep 2.0
+
+#java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomServer 10000 10000 1>results/secureScaling_10000_server &
+
+#sleep 0.8
+
+#java -cp dist/ME_SFE.jar:extlibs/commons-io-1.4.jar prog.RandomClient 10000 10000 1>results/secureScaling_10000_client 

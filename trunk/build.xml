@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<project name="ME_SFE" default="compile">
+	
+	<property name="version" value="0.2"/>
+
+	<target name="init">
+		<mkdir dir="build/classes" />
+		<mkdir dir="dist" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="build/classes" target="1.5" source="1.5">
+			<classpath>
+				<!--<pathelement location="extlibs/jargs.jar" />  -->
+				<pathelement location="extlibs/commons-io-1.4.jar" />
+				<pathelement path="build/classes" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="clean" depends="init">
+		<delete dir="build" />
+		<delete dir="dist" />
+	</target>
+
+	<target name="archive" depends="compile">
+		<jar destfile="dist/ME_SFE.jar">
+			<fileset dir="build/classes" />
+		</jar>
+	</target>
+
+	<target name="runSecureScaling" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runSecureScaling" />
+	</target>
+	
+	<target name="runhamming" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runhamming" />
+	</target>
+	
+	<target name="runhamming_old" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runhamming_old" />
+	</target>
+	
+	<target name="runAES" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runAES" />
+	</target>
+	
+	<target name="runAES_old" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runAES_old" />
+	</target>
+	
+	<target name="runPRESENT" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runPRESENT" />
+	</target>
+	
+	<target name="runFastMultiplication" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runFastMul" />
+	</target>
+	
+	<target name="runSetMinimum_A" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runSetMinimumA" />
+	</target>
+	
+	<target name="runSetMinimum_B" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runSetMinimumB" />
+	</target>
+	
+	<target name="runSetMinimum_C" depends="archive">
+		<mkdir dir="results" />
+		<exec executable="./scripts/runSetMinimumC" />
+	</target>
+	
+    <target name="CreateDistBundle" depends="archive">
+        <zip destfile="ME_SFE_${version}.zip"
+        	basedir = "."
+        	excludes = "build/**, results/**, bin/**, NPOTKey_*, ECNPOTKey_*, .*, ME_SFE_*.zip">
+        	<zipfileset filemode ="755" dir="scripts" prefix="scripts"/>
+        </zip>
+    		
+    </target>
+
+
+</project>
