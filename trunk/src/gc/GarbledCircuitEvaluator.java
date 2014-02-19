@@ -6,7 +6,6 @@ import io.NetUtils;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.util.Arrays;
 
 import math.LabelMath;
 
@@ -47,19 +46,15 @@ public class GarbledCircuitEvaluator extends GarbledCircuitConstants {
 		if(outRegs.length < 1){
 			return null;
 		}
-		byte[] outputZero, outputOne;
+		byte perm;
 		BigInteger output = BigInteger.ZERO;
 		for(int i=0; i<outRegs.length; i++){
-			outputZero = NetUtils.readLabel(dis);
-			outputOne = NetUtils.readLabel(dis);
-			if(Arrays.equals(registers[outRegs[i]], outputZero)){
-			}else{
-				if(Arrays.equals(registers[outRegs[i]], outputOne)){
-					output = output.setBit(i);
-				}else{
-					System.out.println("Puu! Output doesn't match the ODT");
-				}
-			}
+			perm = dis.readByte();
+			if(LabelMath.testBit(registers[outRegs[i]], 0)) {
+                if(perm==0) output = output.setBit(i);
+            } else {
+                if(perm==1) output = output.setBit(i);
+            }
 		}
 		return output;
 	}

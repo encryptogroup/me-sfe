@@ -44,11 +44,11 @@ public class GarbledCircuitCreator extends GarbledCircuitConstants {
 		int[] evalOutputs = reader.getEvaluatorOutputRegisters();
 		for(int reg : evalOutputs){
 			if(inverted[reg]){
-				NetUtils.writeLabel(LabelMath.conjugate(registers[reg]), dos);
-				NetUtils.writeLabel(registers[reg], dos);
+				if (LabelMath.testBit(registers[reg], 0)) dos.writeByte(0);
+                else dos.writeByte(1);
 			}else{
-				NetUtils.writeLabel(registers[reg], dos);
-				NetUtils.writeLabel(LabelMath.conjugate(registers[reg]), dos);
+				if (LabelMath.testBit(registers[reg], 0)) dos.writeByte(1);
+                else dos.writeByte(0);
 			}
 		}
 		dos.flush();
