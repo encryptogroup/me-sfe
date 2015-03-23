@@ -1,0 +1,78 @@
+package comp;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.PrintWriter;
+
+import YaoGC.Circuit;
+import YaoGC.HALF_ADD_2_2;
+import YaoGC.HALF_SUB_2_2;
+import YaoGC.MIN_NL_L;
+import YaoGC.Wire;
+import YaoGC.XOR_2L_L;
+import YaoGC.AESComponents.MixColumns;
+import YaoGC.PRESENTcomponents.PresentFull;
+import YaoGC.PRESENTcomponents.PresentRound;
+
+public class Compiler {
+	
+	private static void printHeaderLine(String name, Wire[] wires, int[] wireIndices, PrintWriter pw){
+		pw.print(name);
+		for(int i=0; i<wireIndices.length; i++){
+			pw.print(wires[wireIndices[i]].getRegisterNum());
+			if(i != wireIndices.length-1){
+				pw.print(",");
+			}
+		}
+		pw.println();
+	}
+	
+	public static void compileCircuit(Circuit c, File destFile, InputOutputDescription inOutDesc) throws Exception{
+		//maybe test if circuit is built
+		if(c.inputWires.length != inOutDesc.getNumberOfInputWires()){
+			throw new Exception("Number of input wires of the circuit " + c.getName() + " doesn't match the given number of inputs: " + inOutDesc.getNumberOfInputWires());
+		}
+		if(c.outputWires.length != inOutDesc.getNumberOfOutputWires()){
+			throw new Exception("Number of output wires of the circuit " + c.getName() + " doesn't match the given number of outputs: " + inOutDesc.getNumberOfOutputWires());
+		}
+		File tmpFile = File.createTempFile("mecComp", null);
+		PrintWriter pw = new PrintWriter(tmpFile);
+		Wire[] inputWires = c.inputWires;
+		printHeaderLine("inputsCreator: ", inputWires, inOutDesc.getCreatorInputWireIndices(), pw);
+		printHeaderLine("inputsEvaluator: ", inputWires, inOutDesc.getEvaluatorInputWireIndices(), pw);
+		c.printCircuit(pw);
+		pw.close();
+		BufferedReader br = new BufferedReader(new FileReader(tmpFile));
+		pw = new PrintWriter(destFile);
+		pw.println(br.readLine());
+		pw.println(br.readLine());
+		Wire[] outputWires = c.outputWires;
+		printHeaderLine("outputsCreator: ", outputWires, inOutDesc.getCreatorOutputWireIndices(), pw);
+		printHeaderLine("outputsEvaluator: ", outputWires, inOutDesc.getEvaluatorOutputWireIndices(), pw);
+		pw.println("numberOfRegisters: " + Wire.getRegisterCount());
+		pw.println("numberOfGates: " + c.getNumberOfGates());
+		String line;
+		while((line=br.readLine()) != null ){
+			pw.println(line);
+		}
+		pw.close();
+		br.close();
+		tmpFile.delete();	
+		System.out.println("Compiliation done.");
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception{
+		Circuit circuit = new HALF_SUB_2_2();
+		circuit.build();
+		File destFile = new File("HSUB.mec");
+		compileCircuit(circuit, destFile, new InputOutputDescription(2, 0, 2, 0));
+		System.out.println("linear gates: " + circuit.getNumberOfLinearGates() + ", nonlinear gates: " + circuit.getNumberOfNonlinearGates());
+		
+		
+	}
+
+}

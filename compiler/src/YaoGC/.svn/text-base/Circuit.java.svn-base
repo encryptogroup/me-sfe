@@ -1,0 +1,117 @@
+// Copyright (C) 2010 by Yan Huang <yhuang@virginia.edu>
+
+package YaoGC;
+
+import java.io.*;
+
+abstract public class Circuit implements TransitiveObserver {
+	
+	public Wire[] inputWires;
+	public Wire[] outputWires;
+
+	protected int inDegree, outDegree;
+	protected String name;
+
+	private int inputWireCount = 0;
+	public static PrintWriter pw = null;
+	protected static int numberOfGates = 0;
+	protected static int linearGatesCount = 0;
+	protected static int nonlinearGatesCount = 0;
+
+	public Circuit(int inDegree, int outDegree, String name) {
+		this.inDegree = inDegree;
+		this.outDegree = outDegree;
+		this.name = name;
+
+		inputWires = new Wire[inDegree];
+		outputWires = new Wire[outDegree];
+	}
+
+
+	abstract public void build() throws Exception;
+
+	protected void createInputWires() {
+		for (int i = 0; i < inDegree; i++) {
+			inputWires[i] = new Wire();
+		}
+	}
+	
+	public void printCircuit(PrintWriter pw) throws Exception{
+		Circuit.pw = pw;
+		for(Wire w : inputWires){
+			w.setReady();
+		}
+	}
+
+	public void startExecuting(int[] vals, boolean[] invd) throws Exception {
+		
+		if (vals.length != invd.length || invd.length != this.inDegree)
+			throw new Exception("Unmatched number of input labels.");
+
+		//tell the outputwires to keep their label
+		for(int i=0; i<outDegree; i++){
+			outputWires[i].isOutputWire = true;
+		}
+		
+		for (int i = 0; i < this.inDegree; i++) {
+			inputWires[i].value = (byte)vals[i];
+			inputWires[i].invd = invd[i];
+			inputWires[i].setReady();
+		}
+	}
+
+	public State startExecuting(State s) {
+
+		if (s.getWidth() != this.inDegree) {
+			Exception e = new Exception("Unmatched number of input labels." + s.getWidth() + " != "
+					+ inDegree);
+			e.printStackTrace();
+			System.exit(1);
+		}
+		//tell the outputwires to keep their label
+		for(int i=0; i<outDegree; i++){
+			outputWires[i].isOutputWire = true;
+		}
+
+		for (int i = 0; i < this.inDegree; i++) {
+			inputWires[i].value = s.wires[i].value;
+			inputWires[i].invd = s.wires[i].invd;
+			inputWires[i].setReady();
+		}
+
+		return State.fromWires(this.outputWires);
+	}
+
+
+	public void update(TransitiveObservable o, Object arg) {
+		inputWireCount++;
+		if (inputWireCount % inDegree == 0){
+			inputWireCount = 0;
+			execute();
+		}
+	}
+	
+	public String getName(){
+		return name;
+	}
+
+	abstract protected void compute();
+
+	abstract protected void execute();
+	
+	public int getNumberOfGates(){
+		return numberOfGates;
+	}
+	
+	public int getNumberOfLinearGates(){
+		return linearGatesCount;
+	}
+	
+	public int getNumberOfNonlinearGates(){
+		return nonlinearGatesCount;
+	}
+	
+	public String toString(){
+		return this.getClass().getName();
+	}
+}

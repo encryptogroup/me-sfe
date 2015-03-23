@@ -1,0 +1,323 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC
+END
+ADD1_Lplus1_Lplus1.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD1_Lplus1_Lplus1.java
+END
+Karatsuba.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/minimizing-sfe/!svn/ver/36/CircuitCompiler/src/YaoGC/Karatsuba.java
+END
+OptEDCORE_3Lplus2S_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/OptEDCORE_3Lplus2S_L.java
+END
+Utility.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/Utility.java
+END
+XOR_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/XOR_2L_L.java
+END
+AES_SBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/AES_SBox.java
+END
+OR_2_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/OR_2_1.java
+END
+ADD1_Lplus1_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD1_Lplus1_L.java
+END
+ADD_1Lplus1plusCarry_Lplus1.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_1Lplus1plusCarry_Lplus1.java
+END
+ADD_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_2L_L.java
+END
+Wire.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/Wire.java
+END
+CompositeCircuit.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/CompositeCircuit.java
+END
+MAX_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MAX_2L_L.java
+END
+XNOR_2_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/XNOR_2_1.java
+END
+EDT_4_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/EDT_4_1.java
+END
+HALF_ADD_2_2.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/HALF_ADD_2_2.java
+END
+SpecialMAX_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/SpecialMAX_2L_L.java
+END
+HALF_SUB_2_2.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/HALF_SUB_2_2.java
+END
+XOR_L_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/XOR_L_1.java
+END
+MIN_NL_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MIN_NL_L.java
+END
+NOT_1_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/NOT_1_1.java
+END
+EDT_2L_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/EDT_2L_1.java
+END
+GT_3_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/GT_3_1.java
+END
+HAMMING_DISTANCE_2L.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/HAMMING_DISTANCE_2L.java
+END
+HAMMING_WEIGHT.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/HAMMING_WEIGHT.java
+END
+COUNTER_2toK_K.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/COUNTER_2toK_K.java
+END
+EDCORE_3Lplus4_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/EDCORE_3Lplus4_L.java
+END
+BarrelShifter.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/minimizing-sfe/!svn/ver/40/CircuitCompiler/src/YaoGC/BarrelShifter.java
+END
+Circuit.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/Circuit.java
+END
+EnsureNonNegativeADD_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/EnsureNonNegativeADD_2L_L.java
+END
+ADD_3_2.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_3_2.java
+END
+TransitiveObservable.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/TransitiveObservable.java
+END
+SUB_3_2.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/SUB_3_2.java
+END
+SUB_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/SUB_2L_L.java
+END
+FastMUL_L_M.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/minimizing-sfe/!svn/ver/36/CircuitCompiler/src/YaoGC/FastMUL_L_M.java
+END
+OR_L_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/OR_L_1.java
+END
+ADD_2LplusCarry_Lplus1.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_2LplusCarry_Lplus1.java
+END
+OptEDCORE_3Lplus4_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/OptEDCORE_3Lplus4_L.java
+END
+XOR_2_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/XOR_2_1.java
+END
+MUL_L_M.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MUL_L_M.java
+END
+GT_2L_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/GT_2L_1.java
+END
+AND_2_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/40/CircuitCompiler/src/YaoGC/AND_2_1.java
+END
+HAMMING_2L_K.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/HAMMING_2L_K.java
+END
+SimpleCircuit_2_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/SimpleCircuit_2_1.java
+END
+MUX_2Lplus1_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MUX_2Lplus1_L.java
+END
+TransitiveObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/TransitiveObserver.java
+END
+BitMask.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/BitMask.java
+END
+MUX_3_1.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MUX_3_1.java
+END
+COUNTER_L_K.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/COUNTER_L_K.java
+END
+MIN_2L_L.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/MIN_2L_L.java
+END
+ADD_2L_Lplus1.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_2L_Lplus1.java
+END
+ADD_L_M_Carry_Lplus1.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/ADD_L_M_Carry_Lplus1.java
+END
+State.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/minimizing-sfe/!svn/ver/35/CircuitCompiler/src/YaoGC/State.java
+END

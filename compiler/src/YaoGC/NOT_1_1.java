@@ -1,0 +1,39 @@
+package YaoGC;
+
+public class NOT_1_1 extends Circuit {
+
+	public NOT_1_1() {
+		super(1, 1, "NOT");
+	}
+
+	@Override
+	public void build() throws Exception {
+		createInputWires();
+		inputWires[0].addObserver(this);
+		outputWires[0] = new Wire();
+	}
+
+	@Override
+	protected void compute() {
+		outputWires[0].value = (byte) (1 - inputWires[0].value);
+	}
+
+	@Override
+	protected void execute() {
+		if(inputWires[0].value != Wire.UNKNOWN_SIG){
+			compute();
+		}else{
+			outputWires[0].invd = !inputWires[0].invd;
+			outputWires[0].value = Wire.UNKNOWN_SIG;
+			outputWires[0].registerNum = inputWires[0].getRegisterNum();
+		}
+		outputWires[0].setReady();
+	}
+
+	@Override
+	public int getNumOfNonLinearGates() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

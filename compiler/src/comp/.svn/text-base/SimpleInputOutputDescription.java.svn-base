@@ -1,0 +1,57 @@
+package comp;
+
+import java.util.Arrays;
+
+public class InputOutputDescription {
+
+	private int[] creatorInputWireIndices, evaluatorInputWireIndices, creatorOutputWireIndices, evaluatorOutputWireIndices;
+	
+	public InputOutputDescription(int numberOfCreatorInputWires, int numberOfEvaluatorInputWires, int numberOfCreatorOutputWires, int numberOfEvaluatorOutputWires){
+		creatorInputWireIndices = new int[numberOfCreatorInputWires];
+		evaluatorInputWireIndices = new int[numberOfEvaluatorInputWires];
+		fill(creatorInputWireIndices, 0);
+		fill(evaluatorInputWireIndices, numberOfCreatorInputWires);
+		creatorOutputWireIndices = new int[numberOfCreatorOutputWires];
+		evaluatorOutputWireIndices = new int[numberOfEvaluatorOutputWires];
+		fill(creatorOutputWireIndices, 0);
+		fill(evaluatorOutputWireIndices, numberOfCreatorOutputWires);
+	}
+	
+	public int[] getCreatorInputWireIndices(){
+		return creatorInputWireIndices;
+	}
+	
+	public int[] getCreatorOutputWireIndices(){
+		return creatorOutputWireIndices;
+	}
+	
+	public int[] getEvaluatorInputWireIndices(){
+		return evaluatorInputWireIndices;
+	}
+	
+	public int[] getEvaluatorOutputWireIndices(){
+		return evaluatorOutputWireIndices;
+	}
+	
+	public int getNumberOfInputWires(){
+		return creatorInputWireIndices.length+evaluatorInputWireIndices.length;
+	}
+	
+	public int getNumberOfOutputWires(){
+		return creatorOutputWireIndices.length+evaluatorOutputWireIndices.length;
+	}
+	
+	private void fill(int[] arr, int startVal){
+		for(int i=0; i<arr.length; i++){
+			arr[i] = startVal++;
+		}
+	}
+	
+	public static void main(String[] args){
+		InputOutputDescription iod = new InputOutputDescription(13, 20, 0, 5);
+		System.out.println(Arrays.toString(iod.getCreatorInputWireIndices()));
+		System.out.println(Arrays.toString(iod.getEvaluatorInputWireIndices()));
+		System.out.println(Arrays.toString(iod.getCreatorOutputWireIndices()));
+		System.out.println(Arrays.toString(iod.getEvaluatorOutputWireIndices()));
+	}
+}
